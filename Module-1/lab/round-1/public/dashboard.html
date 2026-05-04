@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="/css/styles.css" />
+</head>
+<body>
+  <nav class="navbar">
+    <span class="navbar-brand">Auth System</span>
+    <div class="navbar-right">
+      <span id="navUsername" class="navbar-user"></span>
+      <button id="logoutBtn" class="btn btn-ghost btn-sm">Logout</button>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="card card-wide">
+      <h1 class="form-title">Dashboard</h1>
+      <p class="subtitle">You are logged in.</p>
+
+      <div id="profileBox" class="profile-box">
+        <div class="profile-row"><span class="label">Username</span><span id="profileUsername">—</span></div>
+        <div class="profile-row"><span class="label">Email</span><span id="profileEmail">—</span></div>
+        <div class="profile-row"><span class="label">Member since</span><span id="profileCreated">—</span></div>
+      </div>
+
+      <hr class="divider" />
+
+      <h2 class="section-title">Change Password</h2>
+      <form id="changePasswordForm" novalidate>
+        <div class="field">
+          <label for="currentPassword">Current Password</label>
+          <input id="currentPassword" type="password" autocomplete="current-password" placeholder="••••••••" required />
+        </div>
+
+        <div class="field">
+          <label for="newPassword">New Password</label>
+          <input id="newPassword" type="password" autocomplete="new-password" placeholder="Min. 8 characters" required minlength="8" />
+          <div class="password-strength" id="strengthBar"></div>
+        </div>
+
+        <div class="field">
+          <label for="confirmNew">Confirm New Password</label>
+          <input id="confirmNew" type="password" autocomplete="new-password" placeholder="Repeat new password" required />
+        </div>
+
+        <div id="cpError" class="alert alert-error hidden"></div>
+        <div id="cpSuccess" class="alert alert-success hidden"></div>
+
+        <button type="submit" class="btn btn-primary">Update password</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="/js/dashboard.js"></script>
+</body>
+</html>
