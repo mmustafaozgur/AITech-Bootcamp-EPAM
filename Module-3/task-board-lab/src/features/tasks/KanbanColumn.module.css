@@ -1,0 +1,25 @@
+.column {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+  background-color: #f4f5f7;
+  border-radius: 8px;
+  padding: 12px;
+}
+
+.header {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #172b4d;
+  margin: 0 0 12px 0;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #dfe1e6;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.taskList {
+  flex: 1;
+  min-height: 60px;
+}

@@ -1,0 +1,15 @@
+.board {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  padding: 24px;
+  min-height: 100vh;
+  box-sizing: border-box;
+  align-items: flex-start;
+}
+
+@media (min-width: 1024px) {
+  .board {
+    flex-wrap: nowrap;
+  }
+}
